@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="hack3.css">
+</head>
+<body>
+    <video autoplay loop muted src="https://media.istockphoto.com/id/1412993632/video/glowing-question-marks.mp4?s=mp4-640x640-is&k=20&c=9btcCSMPnPDQPzuuy0iA9mZnOgKOmR5DIY8dBn-4Umo="></video>
+
+    <div id="start-page" class="page">
+        <div class="text-overlay">
+            <h1>Welcome to the Quiz Game</h1>
+            <button onclick="goToPage('topic-page')">Start</button>
+        </div>
+    </div>
+
+    <div id="topic-page" class="page" style="display:none;">
+        <div class="image-container">
+            <video autoplay loop muted src="https://media.istockphoto.com/id/1412993632/video/glowing-question-marks.mp4?s=mp4-640x640-is&k=20&c=9btcCSMPnPDQPzuuy0iA9mZnOgKOmR5DIY8dBn-4Umo="></video>
+
+            <div class="text-overlay">
+                <h2>Select a Topic or Level</h2>
+                <button onclick="startQuiz('easy')">Easy</button>
+                <button onclick="startQuiz('medium')">Medium</button>
+                <button onclick="startQuiz('hard')">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-page" class="page" style="display:none;">
+        <div class="image-container">
+            <video autoplay loop muted src="https://media.istockphoto.com/id/1412993632/video/glowing-question-marks.mp4?s=mp4-640x640-is&k=20&c=9btcCSMPnPDQPzuuy0iA9mZnOgKOmR5DIY8dBn-4Umo="></video>
+
+    <div class="text-overlay">
+                <h3 id="question-text"></h3>
+                <div id="choices-container"></div>
+                <button onclick="checkAnswer()">Submit Answer</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-page" class="page" style="display:none;">
+        <div class="image-container">
+            <video autoplay loop muted src="https://media.istockphoto.com/id/1412993632/video/glowing-question-marks.mp4?s=mp4-640x640-is&k=20&c=9btcCSMPnPDQPzuuy0iA9mZnOgKOmR5DIY8dBn-4Umo="></video>
+
+            <div class="text-overlay">
+                <h2 id="result-message"></h2>
+                <p id="score-text"></p>
+                <button onclick="goToPage('start-page')">Go to Home</button>
+                <button onclick="retryQuiz()">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="hack3.js"></script>
+</body>
+</html>
